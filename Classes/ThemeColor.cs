@@ -8,8 +8,15 @@ using System.Windows.Forms;
 
 namespace MarketManagment
 {
-    internal class ThemeColor
+    public  class ThemeColor
     {
+        public static Color primaryColor { get; set; }
+        public static Color secondaryColor { get; set; }
+
+       
+
+
+
         public static List<string> ColorList = new List<string>() { "#3F51B5",
                                                      "#009688",
                                                      "#FF5722",
@@ -42,10 +49,10 @@ namespace MarketManagment
             double red = color.R;
             double green = color.G;
             double blue = color.B;
-            if (correctionFactor< 0)
+            if (correctionFactor < 0)
             {
                 correctionFactor = 1 + correctionFactor;
-                red*= correctionFactor;
+                red *= correctionFactor;
                 green *= correctionFactor;
                 blue *= correctionFactor;
             }
@@ -56,8 +63,8 @@ namespace MarketManagment
                 blue = (255 - blue) * correctionFactor + blue;
             }
             return Color.FromArgb(color.A, (byte)red, (byte)green, (byte)blue);
- }
+        }
 
 
-}
+    }
 }

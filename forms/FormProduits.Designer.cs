@@ -1,6 +1,6 @@
 ﻿namespace MarketManagment.forms
 {
-    partial class FormProd
+    partial class FormProduits
     {
         /// <summary>
         /// Required designer variable.
@@ -38,7 +38,7 @@
             this.lblCode = new System.Windows.Forms.Label();
             this.lblName = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.gb_sort = new System.Windows.Forms.GroupBox();
+            this.btn_rad_four_prod = new System.Windows.Forms.RadioButton();
             this.btn_rad_prix_prod = new System.Windows.Forms.RadioButton();
             this.btn_rad_qte_prod = new System.Windows.Forms.RadioButton();
             this.btn_rad_type_prod = new System.Windows.Forms.RadioButton();
@@ -51,82 +51,88 @@
             this.txt_prix_prod = new System.Windows.Forms.TextBox();
             this.lblFour = new System.Windows.Forms.Label();
             this.txt_four_prod = new System.Windows.Forms.TextBox();
-            this.btn_rad_four_prod = new System.Windows.Forms.RadioButton();
+            this.lblTries = new System.Windows.Forms.Label();
+            this.lblLPd = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_prod)).BeginInit();
-            this.gb_sort.SuspendLayout();
             this.SuspendLayout();
             // 
             // dgv_prod
             // 
-            this.dgv_prod.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgv_prod.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgv_prod.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_prod.Location = new System.Drawing.Point(539, 53);
+            this.dgv_prod.Location = new System.Drawing.Point(539, 71);
             this.dgv_prod.Name = "dgv_prod";
-            this.dgv_prod.Size = new System.Drawing.Size(410, 258);
+            this.dgv_prod.Size = new System.Drawing.Size(521, 299);
             this.dgv_prod.TabIndex = 0;
+            this.dgv_prod.DoubleClick += new System.EventHandler(this.dgv_prod_DoubleClick);
             // 
             // btn_ajou_prod
             // 
             this.btn_ajou_prod.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_ajou_prod.FlatAppearance.BorderSize = 0;
-            this.btn_ajou_prod.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_ajou_prod.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.btn_ajou_prod.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_ajou_prod.Location = new System.Drawing.Point(539, 392);
+            this.btn_ajou_prod.Location = new System.Drawing.Point(650, 433);
             this.btn_ajou_prod.Name = "btn_ajou_prod";
             this.btn_ajou_prod.Size = new System.Drawing.Size(110, 46);
             this.btn_ajou_prod.TabIndex = 3;
             this.btn_ajou_prod.Text = "Ajouter";
             this.btn_ajou_prod.UseVisualStyleBackColor = true;
+            this.btn_ajou_prod.Click += new System.EventHandler(this.btn_ajou_prod_Click);
             // 
             // btn_mod_prod
             // 
             this.btn_mod_prod.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_mod_prod.FlatAppearance.BorderSize = 0;
-            this.btn_mod_prod.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_mod_prod.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.btn_mod_prod.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_mod_prod.Location = new System.Drawing.Point(839, 392);
+            this.btn_mod_prod.Location = new System.Drawing.Point(950, 433);
             this.btn_mod_prod.Name = "btn_mod_prod";
             this.btn_mod_prod.Size = new System.Drawing.Size(110, 46);
             this.btn_mod_prod.TabIndex = 5;
             this.btn_mod_prod.Text = "Modifier";
             this.btn_mod_prod.UseVisualStyleBackColor = true;
+            this.btn_mod_prod.Click += new System.EventHandler(this.btn_mod_prod_Click);
             // 
             // btn_sup_prod
             // 
             this.btn_sup_prod.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_sup_prod.FlatAppearance.BorderSize = 0;
-            this.btn_sup_prod.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_sup_prod.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.btn_sup_prod.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_sup_prod.Location = new System.Drawing.Point(689, 392);
+            this.btn_sup_prod.Location = new System.Drawing.Point(800, 433);
             this.btn_sup_prod.Name = "btn_sup_prod";
             this.btn_sup_prod.Size = new System.Drawing.Size(110, 46);
             this.btn_sup_prod.TabIndex = 6;
             this.btn_sup_prod.Text = "Supprimer";
             this.btn_sup_prod.UseVisualStyleBackColor = true;
+            this.btn_sup_prod.Click += new System.EventHandler(this.btn_sup_prod_Click);
             // 
             // txt_code_prod
             // 
             this.txt_code_prod.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_code_prod.Location = new System.Drawing.Point(111, 33);
+            this.txt_code_prod.Location = new System.Drawing.Point(130, 36);
             this.txt_code_prod.Name = "txt_code_prod";
             this.txt_code_prod.Size = new System.Drawing.Size(100, 23);
             this.txt_code_prod.TabIndex = 8;
+            this.txt_code_prod.TextChanged += new System.EventHandler(this.Get_Produits);
             // 
             // txt_type_prod
             // 
             this.txt_type_prod.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_type_prod.Location = new System.Drawing.Point(111, 110);
+            this.txt_type_prod.Location = new System.Drawing.Point(130, 113);
             this.txt_type_prod.Name = "txt_type_prod";
             this.txt_type_prod.Size = new System.Drawing.Size(100, 23);
             this.txt_type_prod.TabIndex = 9;
+            this.txt_type_prod.TextChanged += new System.EventHandler(this.Get_Produits);
             // 
             // txt_name_prod
             // 
             this.txt_name_prod.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_name_prod.Location = new System.Drawing.Point(111, 71);
+            this.txt_name_prod.Location = new System.Drawing.Point(130, 74);
             this.txt_name_prod.Name = "txt_name_prod";
             this.txt_name_prod.Size = new System.Drawing.Size(100, 23);
             this.txt_name_prod.TabIndex = 10;
+            this.txt_name_prod.TextChanged += new System.EventHandler(this.Get_Produits);
             // 
             // lblCode
             // 
@@ -158,28 +164,27 @@
             this.label3.Size = new System.Drawing.Size(0, 13);
             this.label3.TabIndex = 13;
             // 
-            // gb_sort
+            // btn_rad_four_prod
             // 
-            this.gb_sort.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.gb_sort.Controls.Add(this.btn_rad_four_prod);
-            this.gb_sort.Controls.Add(this.btn_rad_prix_prod);
-            this.gb_sort.Controls.Add(this.btn_rad_qte_prod);
-            this.gb_sort.Controls.Add(this.btn_rad_type_prod);
-            this.gb_sort.Controls.Add(this.btn_rad_code_prod);
-            this.gb_sort.Controls.Add(this.btn_rad_name_prod);
-            this.gb_sort.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gb_sort.Location = new System.Drawing.Point(42, 300);
-            this.gb_sort.Name = "gb_sort";
-            this.gb_sort.Size = new System.Drawing.Size(240, 138);
-            this.gb_sort.TabIndex = 14;
-            this.gb_sort.TabStop = false;
-            this.gb_sort.Text = "Type de trie";
+            this.btn_rad_four_prod.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.btn_rad_four_prod.AutoSize = true;
+            this.btn_rad_four_prod.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_rad_four_prod.Location = new System.Drawing.Point(161, 441);
+            this.btn_rad_four_prod.Name = "btn_rad_four_prod";
+            this.btn_rad_four_prod.Padding = new System.Windows.Forms.Padding(5);
+            this.btn_rad_four_prod.Size = new System.Drawing.Size(107, 31);
+            this.btn_rad_four_prod.TabIndex = 5;
+            this.btn_rad_four_prod.TabStop = true;
+            this.btn_rad_four_prod.Text = "fournisseur";
+            this.btn_rad_four_prod.UseVisualStyleBackColor = true;
+            this.btn_rad_four_prod.CheckedChanged += new System.EventHandler(this.btn_rad_four_prod_CheckedChanged);
             // 
             // btn_rad_prix_prod
             // 
+            this.btn_rad_prix_prod.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.btn_rad_prix_prod.AutoSize = true;
             this.btn_rad_prix_prod.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_rad_prix_prod.Location = new System.Drawing.Point(126, 65);
+            this.btn_rad_prix_prod.Location = new System.Drawing.Point(42, 441);
             this.btn_rad_prix_prod.Name = "btn_rad_prix_prod";
             this.btn_rad_prix_prod.Padding = new System.Windows.Forms.Padding(5);
             this.btn_rad_prix_prod.Size = new System.Drawing.Size(59, 31);
@@ -187,12 +192,14 @@
             this.btn_rad_prix_prod.TabStop = true;
             this.btn_rad_prix_prod.Text = "Prix";
             this.btn_rad_prix_prod.UseVisualStyleBackColor = true;
+            this.btn_rad_prix_prod.CheckedChanged += new System.EventHandler(this.btn_rad_prix_prod_CheckedChanged);
             // 
             // btn_rad_qte_prod
             // 
+            this.btn_rad_qte_prod.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.btn_rad_qte_prod.AutoSize = true;
             this.btn_rad_qte_prod.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_rad_qte_prod.Location = new System.Drawing.Point(126, 32);
+            this.btn_rad_qte_prod.Location = new System.Drawing.Point(161, 375);
             this.btn_rad_qte_prod.Name = "btn_rad_qte_prod";
             this.btn_rad_qte_prod.Padding = new System.Windows.Forms.Padding(5);
             this.btn_rad_qte_prod.Size = new System.Drawing.Size(95, 31);
@@ -200,12 +207,14 @@
             this.btn_rad_qte_prod.TabStop = true;
             this.btn_rad_qte_prod.Text = "Quantiter";
             this.btn_rad_qte_prod.UseVisualStyleBackColor = true;
+            this.btn_rad_qte_prod.CheckedChanged += new System.EventHandler(this.btn_rad_qte_prod_CheckedChanged);
             // 
             // btn_rad_type_prod
             // 
+            this.btn_rad_type_prod.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.btn_rad_type_prod.AutoSize = true;
             this.btn_rad_type_prod.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_rad_type_prod.Location = new System.Drawing.Point(20, 65);
+            this.btn_rad_type_prod.Location = new System.Drawing.Point(161, 408);
             this.btn_rad_type_prod.Name = "btn_rad_type_prod";
             this.btn_rad_type_prod.Padding = new System.Windows.Forms.Padding(5);
             this.btn_rad_type_prod.Size = new System.Drawing.Size(68, 31);
@@ -213,12 +222,14 @@
             this.btn_rad_type_prod.TabStop = true;
             this.btn_rad_type_prod.Text = "Type";
             this.btn_rad_type_prod.UseVisualStyleBackColor = true;
+            this.btn_rad_type_prod.CheckedChanged += new System.EventHandler(this.btn_rad_type_prod_CheckedChanged);
             // 
             // btn_rad_code_prod
             // 
+            this.btn_rad_code_prod.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.btn_rad_code_prod.AutoSize = true;
             this.btn_rad_code_prod.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_rad_code_prod.Location = new System.Drawing.Point(20, 32);
+            this.btn_rad_code_prod.Location = new System.Drawing.Point(42, 375);
             this.btn_rad_code_prod.Name = "btn_rad_code_prod";
             this.btn_rad_code_prod.Padding = new System.Windows.Forms.Padding(5);
             this.btn_rad_code_prod.Size = new System.Drawing.Size(69, 31);
@@ -226,12 +237,14 @@
             this.btn_rad_code_prod.TabStop = true;
             this.btn_rad_code_prod.Text = "Code";
             this.btn_rad_code_prod.UseVisualStyleBackColor = true;
+            this.btn_rad_code_prod.CheckedChanged += new System.EventHandler(this.btn_rad_code_prod_CheckedChanged);
             // 
             // btn_rad_name_prod
             // 
+            this.btn_rad_name_prod.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.btn_rad_name_prod.AutoSize = true;
             this.btn_rad_name_prod.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_rad_name_prod.Location = new System.Drawing.Point(20, 98);
+            this.btn_rad_name_prod.Location = new System.Drawing.Point(42, 408);
             this.btn_rad_name_prod.Name = "btn_rad_name_prod";
             this.btn_rad_name_prod.Padding = new System.Windows.Forms.Padding(5);
             this.btn_rad_name_prod.Size = new System.Drawing.Size(73, 31);
@@ -239,6 +252,7 @@
             this.btn_rad_name_prod.TabStop = true;
             this.btn_rad_name_prod.Text = "Name";
             this.btn_rad_name_prod.UseVisualStyleBackColor = true;
+            this.btn_rad_name_prod.CheckedChanged += new System.EventHandler(this.btn_rad_name_prod_CheckedChanged);
             // 
             // lbltype
             // 
@@ -265,16 +279,17 @@
             // txt_qte_prod
             // 
             this.txt_qte_prod.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_qte_prod.Location = new System.Drawing.Point(111, 151);
+            this.txt_qte_prod.Location = new System.Drawing.Point(130, 154);
             this.txt_qte_prod.Name = "txt_qte_prod";
             this.txt_qte_prod.Size = new System.Drawing.Size(100, 23);
             this.txt_qte_prod.TabIndex = 16;
+            this.txt_qte_prod.TextChanged += new System.EventHandler(this.Get_Produits);
             // 
             // lblPrix
             // 
             this.lblPrix.AutoSize = true;
             this.lblPrix.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPrix.Location = new System.Drawing.Point(265, 36);
+            this.lblPrix.Location = new System.Drawing.Point(39, 198);
             this.lblPrix.Name = "lblPrix";
             this.lblPrix.Size = new System.Drawing.Size(31, 17);
             this.lblPrix.TabIndex = 19;
@@ -284,16 +299,17 @@
             // txt_prix_prod
             // 
             this.txt_prix_prod.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_prix_prod.Location = new System.Drawing.Point(356, 33);
+            this.txt_prix_prod.Location = new System.Drawing.Point(130, 195);
             this.txt_prix_prod.Name = "txt_prix_prod";
             this.txt_prix_prod.Size = new System.Drawing.Size(100, 23);
             this.txt_prix_prod.TabIndex = 18;
+            this.txt_prix_prod.TextChanged += new System.EventHandler(this.Get_Produits);
             // 
             // lblFour
             // 
             this.lblFour.AutoSize = true;
             this.lblFour.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFour.Location = new System.Drawing.Point(265, 74);
+            this.lblFour.Location = new System.Drawing.Point(39, 236);
             this.lblFour.Name = "lblFour";
             this.lblFour.Size = new System.Drawing.Size(78, 17);
             this.lblFour.TabIndex = 21;
@@ -303,38 +319,57 @@
             // txt_four_prod
             // 
             this.txt_four_prod.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_four_prod.Location = new System.Drawing.Point(356, 71);
+            this.txt_four_prod.Location = new System.Drawing.Point(130, 233);
             this.txt_four_prod.Name = "txt_four_prod";
             this.txt_four_prod.Size = new System.Drawing.Size(100, 23);
             this.txt_four_prod.TabIndex = 20;
+            this.txt_four_prod.TextChanged += new System.EventHandler(this.Get_Produits);
             // 
-            // btn_rad_four_prod
+            // lblTries
             // 
-            this.btn_rad_four_prod.AutoSize = true;
-            this.btn_rad_four_prod.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_rad_four_prod.Location = new System.Drawing.Point(126, 98);
-            this.btn_rad_four_prod.Name = "btn_rad_four_prod";
-            this.btn_rad_four_prod.Padding = new System.Windows.Forms.Padding(5);
-            this.btn_rad_four_prod.Size = new System.Drawing.Size(107, 31);
-            this.btn_rad_four_prod.TabIndex = 5;
-            this.btn_rad_four_prod.TabStop = true;
-            this.btn_rad_four_prod.Text = "fournisseur";
-            this.btn_rad_four_prod.UseVisualStyleBackColor = true;
+            this.lblTries.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lblTries.AutoSize = true;
+            this.lblTries.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTries.Location = new System.Drawing.Point(39, 345);
+            this.lblTries.Name = "lblTries";
+            this.lblTries.Size = new System.Drawing.Size(45, 17);
+            this.lblTries.TabIndex = 22;
+            this.lblTries.Text = "Tries";
             // 
-            // FormProd
+            // lblLPd
+            // 
+            this.lblLPd.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblLPd.AutoSize = true;
+            this.lblLPd.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLPd.Location = new System.Drawing.Point(536, 36);
+            this.lblLPd.Name = "lblLPd";
+            this.lblLPd.Size = new System.Drawing.Size(139, 17);
+            this.lblLPd.TabIndex = 23;
+            this.lblLPd.Text = "Liste des Produits";
+            // 
+            // FormProduits
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(973, 470);
+            this.ClientSize = new System.Drawing.Size(1084, 511);
+            this.Controls.Add(this.lblLPd);
+            this.Controls.Add(this.lblTries);
+            this.Controls.Add(this.btn_rad_four_prod);
             this.Controls.Add(this.lblFour);
+            this.Controls.Add(this.btn_rad_prix_prod);
             this.Controls.Add(this.txt_four_prod);
+            this.Controls.Add(this.btn_rad_qte_prod);
             this.Controls.Add(this.lblPrix);
+            this.Controls.Add(this.btn_rad_type_prod);
+            this.Controls.Add(this.btn_rad_code_prod);
             this.Controls.Add(this.txt_prix_prod);
+            this.Controls.Add(this.btn_rad_name_prod);
             this.Controls.Add(this.lblQte);
             this.Controls.Add(this.txt_qte_prod);
             this.Controls.Add(this.lbltype);
-            this.Controls.Add(this.gb_sort);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.lblName);
             this.Controls.Add(this.lblCode);
@@ -345,11 +380,10 @@
             this.Controls.Add(this.btn_mod_prod);
             this.Controls.Add(this.btn_ajou_prod);
             this.Controls.Add(this.dgv_prod);
-            this.Name = "FormProd";
-            this.Text = "FormsProd";
+            this.Name = "FormProduits";
+            this.Text = "Produits";
+            this.Load += new System.EventHandler(this.Produits_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_prod)).EndInit();
-            this.gb_sort.ResumeLayout(false);
-            this.gb_sort.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -367,7 +401,6 @@
         private System.Windows.Forms.Label lblCode;
         private System.Windows.Forms.Label lblName;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.GroupBox gb_sort;
         private System.Windows.Forms.RadioButton btn_rad_type_prod;
         private System.Windows.Forms.RadioButton btn_rad_code_prod;
         private System.Windows.Forms.RadioButton btn_rad_name_prod;
@@ -381,5 +414,7 @@
         private System.Windows.Forms.Label lblFour;
         private System.Windows.Forms.TextBox txt_four_prod;
         private System.Windows.Forms.RadioButton btn_rad_four_prod;
+        private System.Windows.Forms.Label lblTries;
+        private System.Windows.Forms.Label lblLPd;
     }
 }

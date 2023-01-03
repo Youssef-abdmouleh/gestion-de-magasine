@@ -10,11 +10,14 @@ using System.Windows.Forms;
 
 namespace MarketManagment.forms
 {
-    public partial class FormNotif : Form
+    public partial class FormSet : Form
     {
-        public FormNotif()
+        public FormSet()
         {
             InitializeComponent();
+        }
+        private void Setting_Load(object sender, EventArgs e)
+        {
             LoadTheme();
         }
 
@@ -30,44 +33,41 @@ namespace MarketManagment.forms
                     btn.FlatAppearance.BorderColor = ThemeColor.secondaryColor;
                 }
             }
-            lblLNote.ForeColor = ThemeColor.primaryColor;
+            lblLSet.ForeColor = ThemeColor.primaryColor;
             lblTries.ForeColor = ThemeColor.secondaryColor;
         }
 
         private void lblCode_Click(object sender, EventArgs e)
         {
-            txt_code_notif.Focus();
+            txt_code_set.Focus();
         }
 
         private void lblName_Click(object sender, EventArgs e)
         {
-            txt_name_notif.Focus();
+            txt_name_set.Focus();
         }
 
         private void lbltype_Click(object sender, EventArgs e)
         {
-            txt_type_notif.Focus();
+            txt_type_set.Focus();
         }
 
         private void lblQte_Click(object sender, EventArgs e)
         {
-            txt_qte_notif.Focus();
+            txt_qte_set.Focus();
         }
 
         private void lblPrix_Click(object sender, EventArgs e)
         {
-            txt_prix_notif.Focus();
+            txt_prix_set.Focus();
         }
 
         private void lblFour_Click(object sender, EventArgs e)
         {
-            txt_four_notif.Focus();
+            txt_four_set.Focus();
         }
 
-        private void Notifications_Load(object sender, EventArgs e)
-        {
-
-        }
+      
 
 
     }

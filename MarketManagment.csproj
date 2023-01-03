@@ -46,17 +46,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\Client.cs" />
+    <Compile Include="Classes\ClientADO.cs" />
+    <Compile Include="Classes\connection.cs" />
+    <Compile Include="Classes\OrderADO.cs" />
+    <Compile Include="Classes\ProduitADO.cs" />
+    <Compile Include="Classes\Produit.cs" />
     <Compile Include="forms\FormClients.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="forms\FormClients.Designer.cs">
       <DependentUpon>FormClients.cs</DependentUpon>
     </Compile>
-    <Compile Include="forms\FormOrder.cs">
+    <Compile Include="forms\FormOrders.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="forms\FormOrder.Designer.cs">
-      <DependentUpon>FormOrder.cs</DependentUpon>
+    <Compile Include="forms\FormOrders.Designer.cs">
+      <DependentUpon>FormOrders.cs</DependentUpon>
     </Compile>
     <Compile Include="forms\FormNotif.cs">
       <SubType>Form</SubType>
@@ -64,23 +70,23 @@
     <Compile Include="forms\FormNotif.Designer.cs">
       <DependentUpon>FormNotif.cs</DependentUpon>
     </Compile>
-    <Compile Include="forms\FormRaport.cs">
+    <Compile Include="forms\FormRap.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="forms\FormRaport.Designer.cs">
-      <DependentUpon>FormRaport.cs</DependentUpon>
+    <Compile Include="forms\FormRap.Designer.cs">
+      <DependentUpon>FormRap.cs</DependentUpon>
     </Compile>
-    <Compile Include="forms\FormSetting.cs">
+    <Compile Include="forms\FormSet.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="forms\FormSetting.Designer.cs">
-      <DependentUpon>FormSetting.cs</DependentUpon>
+    <Compile Include="forms\FormSet.Designer.cs">
+      <DependentUpon>FormSet.cs</DependentUpon>
     </Compile>
-    <Compile Include="forms\FormProd.cs">
+    <Compile Include="forms\FormProduits.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="forms\FormProd.Designer.cs">
-      <DependentUpon>FormProd.cs</DependentUpon>
+    <Compile Include="forms\FormProduits.Designer.cs">
+      <DependentUpon>FormProduits.cs</DependentUpon>
     </Compile>
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
@@ -95,9 +101,24 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="ThemeColor.cs" />
-    <EmbeddedResource Include="forms\FormProd.resx">
-      <DependentUpon>FormProd.cs</DependentUpon>
+    <Compile Include="Classes\ThemeColor.cs" />
+    <EmbeddedResource Include="forms\FormClients.resx">
+      <DependentUpon>FormClients.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\FormNotif.resx">
+      <DependentUpon>FormNotif.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\FormOrders.resx">
+      <DependentUpon>FormOrders.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\FormProduits.resx">
+      <DependentUpon>FormProduits.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\FormRap.resx">
+      <DependentUpon>FormRap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\FormSet.resx">
+      <DependentUpon>FormSet.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>

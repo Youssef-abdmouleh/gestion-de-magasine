@@ -38,6 +38,10 @@
             this.btn_prod = new System.Windows.Forms.Button();
             this.pan_Logo = new System.Windows.Forms.Panel();
             this.pan_Title = new System.Windows.Forms.Panel();
+            this.btn_maxi = new System.Windows.Forms.Button();
+            this.btn_mini = new System.Windows.Forms.Button();
+            this.btn_close = new System.Windows.Forms.Button();
+            this.btn_close_childForms = new System.Windows.Forms.Button();
             this.Title = new System.Windows.Forms.Label();
             this.pan_main = new System.Windows.Forms.Panel();
             this.pan_Menu.SuspendLayout();
@@ -57,7 +61,7 @@
             this.pan_Menu.Dock = System.Windows.Forms.DockStyle.Left;
             this.pan_Menu.Location = new System.Drawing.Point(0, 0);
             this.pan_Menu.Name = "pan_Menu";
-            this.pan_Menu.Size = new System.Drawing.Size(220, 542);
+            this.pan_Menu.Size = new System.Drawing.Size(220, 641);
             this.pan_Menu.TabIndex = 0;
             // 
             // btn_set
@@ -73,7 +77,7 @@
             this.btn_set.Padding = new System.Windows.Forms.Padding(3, 0, 0, 0);
             this.btn_set.Size = new System.Drawing.Size(220, 60);
             this.btn_set.TabIndex = 7;
-            this.btn_set.Text = " Parametre";
+            this.btn_set.Text = " Reglage";
             this.btn_set.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_set.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_set.UseCompatibleTextRendering = true;
@@ -192,12 +196,79 @@
             // pan_Title
             // 
             this.pan_Title.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(136)))));
+            this.pan_Title.Controls.Add(this.btn_maxi);
+            this.pan_Title.Controls.Add(this.btn_mini);
+            this.pan_Title.Controls.Add(this.btn_close);
+            this.pan_Title.Controls.Add(this.btn_close_childForms);
             this.pan_Title.Controls.Add(this.Title);
             this.pan_Title.Dock = System.Windows.Forms.DockStyle.Top;
             this.pan_Title.Location = new System.Drawing.Point(220, 0);
             this.pan_Title.Name = "pan_Title";
-            this.pan_Title.Size = new System.Drawing.Size(814, 80);
+            this.pan_Title.Size = new System.Drawing.Size(1264, 80);
             this.pan_Title.TabIndex = 1;
+            this.pan_Title.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pan_Title_MouseDown);
+            // 
+            // btn_maxi
+            // 
+            this.btn_maxi.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_maxi.AutoSize = true;
+            this.btn_maxi.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btn_maxi.FlatAppearance.BorderSize = 0;
+            this.btn_maxi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_maxi.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_maxi.Location = new System.Drawing.Point(1197, 3);
+            this.btn_maxi.Name = "btn_maxi";
+            this.btn_maxi.Size = new System.Drawing.Size(29, 27);
+            this.btn_maxi.TabIndex = 4;
+            this.btn_maxi.Text = "O";
+            this.btn_maxi.UseVisualStyleBackColor = true;
+            this.btn_maxi.Click += new System.EventHandler(this.btn_maxi_Click);
+            // 
+            // btn_mini
+            // 
+            this.btn_mini.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_mini.AutoSize = true;
+            this.btn_mini.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btn_mini.FlatAppearance.BorderSize = 0;
+            this.btn_mini.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_mini.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_mini.Location = new System.Drawing.Point(1162, 3);
+            this.btn_mini.Name = "btn_mini";
+            this.btn_mini.Size = new System.Drawing.Size(29, 27);
+            this.btn_mini.TabIndex = 3;
+            this.btn_mini.Text = "O";
+            this.btn_mini.UseVisualStyleBackColor = true;
+            this.btn_mini.Click += new System.EventHandler(this.btn_mini_Click);
+            // 
+            // btn_close
+            // 
+            this.btn_close.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_close.AutoSize = true;
+            this.btn_close.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btn_close.FlatAppearance.BorderSize = 0;
+            this.btn_close.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_close.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_close.Location = new System.Drawing.Point(1232, 3);
+            this.btn_close.Name = "btn_close";
+            this.btn_close.Size = new System.Drawing.Size(29, 27);
+            this.btn_close.TabIndex = 2;
+            this.btn_close.Text = "O";
+            this.btn_close.UseVisualStyleBackColor = true;
+            this.btn_close.Click += new System.EventHandler(this.btn_close_Click);
+            // 
+            // btn_close_childForms
+            // 
+            this.btn_close_childForms.AutoSize = true;
+            this.btn_close_childForms.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btn_close_childForms.FlatAppearance.BorderSize = 0;
+            this.btn_close_childForms.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_close_childForms.Image = ((System.Drawing.Image)(resources.GetObject("btn_close_childForms.Image")));
+            this.btn_close_childForms.Location = new System.Drawing.Point(0, 0);
+            this.btn_close_childForms.Name = "btn_close_childForms";
+            this.btn_close_childForms.Size = new System.Drawing.Size(75, 80);
+            this.btn_close_childForms.TabIndex = 1;
+            this.btn_close_childForms.UseVisualStyleBackColor = true;
+            this.btn_close_childForms.Click += new System.EventHandler(this.btn_close_childForms_Click);
             // 
             // Title
             // 
@@ -205,7 +276,7 @@
             this.Title.AutoSize = true;
             this.Title.Font = new System.Drawing.Font("Monotype Corsiva", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Title.ForeColor = System.Drawing.Color.White;
-            this.Title.Location = new System.Drawing.Point(336, 31);
+            this.Title.Location = new System.Drawing.Point(561, 31);
             this.Title.Name = "Title";
             this.Title.Size = new System.Drawing.Size(66, 25);
             this.Title.TabIndex = 0;
@@ -216,17 +287,18 @@
             this.pan_main.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pan_main.Location = new System.Drawing.Point(220, 80);
             this.pan_main.Name = "pan_main";
-            this.pan_main.Size = new System.Drawing.Size(814, 462);
+            this.pan_main.Size = new System.Drawing.Size(1264, 561);
             this.pan_main.TabIndex = 2;
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1034, 542);
+            this.ClientSize = new System.Drawing.Size(1484, 641);
             this.Controls.Add(this.pan_main);
             this.Controls.Add(this.pan_Title);
             this.Controls.Add(this.pan_Menu);
+            this.MinimumSize = new System.Drawing.Size(1100, 550);
             this.Name = "MainForm";
             this.Text = "MainForm";
             this.pan_Menu.ResumeLayout(false);
@@ -249,5 +321,9 @@
         private System.Windows.Forms.Panel pan_Title;
         private System.Windows.Forms.Label Title;
         private System.Windows.Forms.Panel pan_main;
+        private System.Windows.Forms.Button btn_close_childForms;
+        private System.Windows.Forms.Button btn_maxi;
+        private System.Windows.Forms.Button btn_mini;
+        private System.Windows.Forms.Button btn_close;
     }
 }
